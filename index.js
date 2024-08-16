@@ -39,7 +39,7 @@ exports.handler = async (event) => {
           body: JSON.stringify(error.response.data),
         };
       }
-      break;
+      
 
 
     case "advance":
@@ -59,7 +59,6 @@ exports.handler = async (event) => {
           body: JSON.stringify(error.response.data),
         };
       }
-      break;
 
     case "dynamic":
       try {
@@ -78,7 +77,7 @@ exports.handler = async (event) => {
           body: JSON.stringify(error.response.data),
         };
       }
-      break;
+      
 
     default:
       return {
