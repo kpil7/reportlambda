@@ -55,16 +55,3 @@ jobs:
             --region eu-north-1 \
             --publish
 
-      - name: Wait for Lambda update to complete
-        run: sleep 10
-
-      # - name: Update Lambda Function Configuration
-      #   if: success()
-      #   env:
-      #     AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-      #     AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      #   run: |
-      #     aws lambda update-function-configuration \
-      #       --function-name reportlambda \
-      #       --layers ${{ secrets.LAMBDA_LAYER_ARN }}  \
-      #       --region eu-north-1
